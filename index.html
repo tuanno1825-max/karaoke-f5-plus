@@ -16,10 +16,15 @@
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎤</text></svg>">
 
-  <!-- Google Fonts -->
+  <!-- Preconnect to CDNs for Maximum Speed -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://maps.google.com">
+
+  <!-- Optimized Google Fonts with display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -183,7 +188,7 @@
         <div class="hero-media">
           <div class="hero-card-glow">
             <div class="hero-image-wrapper">
-              <img src="phong-hat-1.jpg" alt="Không gian phòng hát Karaoke F5 Plus 66 Tố Hữu" class="hero-main-img">
+              <img src="phong-hat-1.jpg" alt="Không gian phòng hát Karaoke F5 Plus 66 Tố Hữu" class="hero-main-img" fetchpriority="high" width="960" height="960">
               <div class="hero-overlay"></div>
               <div class="hero-floating-badge badge-top">
                 <i class="fa-solid fa-star text-gold"></i>
@@ -215,7 +220,7 @@
           <div class="about-owner-column">
             <div class="owner-card">
               <div class="owner-frame">
-                <img src="chinh-chu.jpg" alt="Chính chủ Karaoke F5 Plus 66 Tố Hữu" class="owner-img">
+                <img src="chinh-chu.jpg" alt="Chính chủ Karaoke F5 Plus 66 Tố Hữu" class="owner-img" loading="lazy" decoding="async" width="800" height="1067">
                 <div class="owner-glow-border"></div>
                 <div class="owner-stamp">
                   <i class="fa-solid fa-shield-halved"></i>
@@ -313,7 +318,7 @@
           <!-- Card Phòng 1 -->
           <div class="room-card" data-category="royal">
             <div class="room-img-container">
-              <img src="phong-hat-1.jpg" alt="Phòng VIP Hoàng Gia Karaoke F5 Plus" class="room-img">
+              <img src="phong-hat-1.jpg" alt="Phòng VIP Hoàng Gia Karaoke F5 Plus" class="room-img" loading="lazy" decoding="async" width="960" height="960">
               <div class="room-badge">VIP Hoàng Gia</div>
               <button class="room-zoom-btn" onclick="openLightbox('phong-hat-1.jpg', 'Phòng Super VIP Hoàng Gia - Đẳng Cấp Thượng Lưu')">
                 <i class="fa-solid fa-magnifying-glass-plus"></i> Xem Ảnh Lớn
@@ -348,7 +353,7 @@
           <!-- Card Phòng 2 -->
           <div class="room-card" data-category="party">
             <div class="room-img-container">
-              <img src="phong-hat-2.jpg" alt="Phòng Cyber Party Karaoke F5 Plus" class="room-img">
+              <img src="phong-hat-2.jpg" alt="Phòng Cyber Party Karaoke F5 Plus" class="room-img" loading="lazy" decoding="async" width="960" height="720">
               <div class="room-badge badge-party">Cyber Club Party</div>
               <button class="room-zoom-btn" onclick="openLightbox('phong-hat-2.jpg', 'Phòng Cyber Club Party - Ánh Sáng Laser 3D Cực Bốc')">
                 <i class="fa-solid fa-magnifying-glass-plus"></i> Xem Ảnh Lớn
@@ -383,7 +388,7 @@
           <!-- Card Phòng 3 -->
           <div class="room-card" data-category="classic">
             <div class="room-img-container">
-              <img src="phong-hat-3.jpg" alt="Phòng Luxury Classic Karaoke F5 Plus" class="room-img">
+              <img src="phong-hat-3.jpg" alt="Phòng Luxury Classic Karaoke F5 Plus" class="room-img" loading="lazy" decoding="async" width="960" height="720">
               <div class="room-badge badge-classic">Luxury Classic</div>
               <button class="room-zoom-btn" onclick="openLightbox('phong-hat-3.jpg', 'Phòng Luxury Classic VIP - Ấm Cúng & Tinh Tế')">
                 <i class="fa-solid fa-magnifying-glass-plus"></i> Xem Ảnh Lớn
