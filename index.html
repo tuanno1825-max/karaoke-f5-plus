@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KARAOKE F5 PLUS - 66 Tố Hữu, Vạn Phúc, Hà Đông | Đẳng Cấp Thượng Lưu</title>
+  <meta name="description" content="Karaoke F5 Plus - 66 Tố Hữu, Vạn Phúc, Hà Đông. Âm thanh đỉnh cao, ánh sáng Laser 3D lung linh, phòng VIP sang trọng. Hotline đặt phòng: 0931 568 866.">
+  <meta name="keywords" content="karaoke F5 plus, karaoke 66 to huu, karaoke van phuc ha dong, karaoke vip ha dong, karaoke am thanh dinh cao">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="KARAOKE F5 PLUS - 66 Tố Hữu, Hà Đông">
+  <meta property="og:description" content="Thiên đường giải trí âm thanh & ánh sáng đỉnh cao tại Hà Đông. Hotline đặt phòng: 0931 568 866">
+  <meta property="og:image" content="phong-hat-1.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎤</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Canvas hiệu ứng bụi vàng & tia sáng lung linh -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Ánh sáng hào quang chuyển động mờ ảo phía sau -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- TOP RUNNING MARQUEE -->
+  <div class="top-marquee">
+    <div class="marquee-content">
+      <span><i class="fa-solid fa-crown"></i> <strong>KARAOKE F5 PLUS - 66 TỐ HỮU, VẠN PHÚC, HÀ ĐÔNG</strong></span>
+      <span><i class="fa-solid fa-fire"></i> ƯU ĐÃI ĐẶC BIỆT: GIẢM 15% CHO KHÁCH GỌI ĐẶT PHÒNG TRƯỚC</span>
+      <span><i class="fa-solid fa-gift"></i> TẶNG GÓI TRANG TRÍ SINH NHẬT - LIÊN HOAN DOANH NGHIỆP</span>
+      <span><i class="fa-solid fa-phone-volume"></i> HOTLINE ĐẶT PHÒNG VIP 24/7: <strong>0931 568 866</strong></span>
+      <span><i class="fa-solid fa-square-parking"></i> BÃI ĐỖ XE Ô TÔ & XE MÁY RỘNG RÃI THOẢI MÁI</span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-microphone-lines"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-sub">LUXURY LOUNGE</span>
+          <span class="brand-name">F5 <span class="plus-glow">PLUS</span></span>
+          <span class="brand-tag">KARAOKE CLUB</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Trang Chủ</a></li>
+          <li><a href="#about" class="nav-link">Giới Thiệu</a></li>
+          <li><a href="#rooms" class="nav-link">Không Gian VIP</a></li>
+          <li><a href="#features" class="nav-link">Điểm Nổi Bật</a></li>
+          <li><a href="#pricing" class="nav-link">Bảng Giá & Gói Tiệc</a></li>
+          <li><a href="#contact" class="nav-link">Bản Đồ & Liên Hệ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:0931568866" class="btn-hotline-nav">
+          <i class="fa-solid fa-phone"></i>
+          <span class="hotline-text">
+            <small>Hotline Đặt Phòng</small>
+            <strong>0931 568 866</strong>
+          </span>
+        </a>
+
+        <a href="tel:0931568866" class="btn-primary-neon">
+          <i class="fa-solid fa-phone-volume"></i>
+          <span>Gọi Đặt Phòng</span>
+        </a>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-spotlight spotlight-left"></div>
+      <div class="hero-spotlight spotlight-right"></div>
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>ĐIỂM HẸN GIẢI TRÍ SỐ 1 HÀ ĐÔNG</span>
+          </div>
+
+          <h1 class="hero-title">
+            KARAOKE <span class="gold-gradient">F5 PLUS</span>
+            <span class="subtitle-neon">ĐẲNG CẤP ÂM THANH & ÁNH SÁNG ĐỈNH CAO</span>
+          </h1>
+
+          <p class="hero-desc">
+            Tọa lạc tại vị trí đắc địa <strong>66 Tố Hữu, Vạn Phúc, Hà Đông</strong>. Karaoke F5 Plus kiến tạo không gian giải trí đỉnh cao với hệ thống âm thanh vòm tiêu chuẩn quốc tế, ánh sáng Laser 3D lung linh huyền ảo cùng cung cách phục vụ hoàng gia.
+          </p>
+
+          <!-- Equalizer Animation Effect -->
+          <div class="music-visualizer" title="Hệ thống âm thanh sống động">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+            <span class="bar bar-4"></span>
+            <span class="bar bar-5"></span>
+            <span class="bar bar-6"></span>
+            <span class="bar bar-7"></span>
+            <span class="bar bar-8"></span>
+            <span class="bar bar-9"></span>
+            <span class="bar bar-10"></span>
+            <span class="bar bar-11"></span>
+            <span class="bar bar-12"></span>
+            <div class="visualizer-label">
+              <i class="fa-solid fa-compact-disc fa-spin"></i> Sound System Ultra Bass
+            </div>
+          </div>
+
+          <!-- Hero Call To Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="tel:0931568866" class="btn-hero-call">
+              <span class="btn-icon"><i class="fa-solid fa-phone-volume"></i></span>
+              <span class="btn-info">
+                <small>HOTLINE ĐẶT PHÒNG 24/7</small>
+                <strong>0931 568 866</strong>
+              </span>
+            </a>
+
+            <a href="https://zalo.me/0931568866" target="_blank" rel="noopener noreferrer" class="btn-hero-zalo">
+              <i class="fa-solid fa-comment-dots"></i>
+              <span>Nhắn Zalo Giữ Phòng</span>
+            </a>
+
+            <a href="https://www.google.com/maps/place/66+P.+T%E1%BB%91+H%E1%BB%AFu,+H%C3%A0+%C4%90%C3%B4ng,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@20.9852417,105.7722653,17z/data=!4m15!1m8!3m7!1s0x31345331499232fb:0xf6d8f5ce3c282728!2zNjYgUC4gVOG7kSBI4buvdSwgSMOgIMSQw7RuZywgSMOgIE7hu5lpIDEwMDAwMCwgVmlldG5hbQ!3b1!8m2!3d20.9852367!4d105.7748402!16s%2Fg%2F11vqmws05z!3m5!1s0x31345331499232fb:0xf6d8f5ce3c282728!8m2!3d20.9852367!4d105.7748402!16s%2Fg%2F11vqmws05z?entry=ttu" target="_blank" rel="noopener noreferrer" class="btn-hero-maps">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Chỉ Đường (Google Maps)</span>
+            </a>
+          </div>
+
+          <!-- Quick Highlights -->
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <i class="fa-solid fa-sliders"></i>
+              <span>Âm Thanh Vòm Siêu Trầm</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span>Laser 3D Đa Chiều</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-champagne-glasses"></i>
+              <span>Tiệc Sinh Nhật & Sự Kiện</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-square-parking"></i>
+              <span>Bãi Đậu Ô Tô 100% Thoải Mái</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Feature Card -->
+        <div class="hero-media">
+          <div class="hero-card-glow">
+            <div class="hero-image-wrapper">
+              <img src="phong-hat-1.jpg" alt="Không gian phòng hát Karaoke F5 Plus 66 Tố Hữu" class="hero-main-img">
+              <div class="hero-overlay"></div>
+              <div class="hero-floating-badge badge-top">
+                <i class="fa-solid fa-star text-gold"></i>
+                <span>Phòng VIP Hoàng Gia Sang Trọng</span>
+              </div>
+              <div class="hero-floating-badge badge-bottom">
+                <i class="fa-solid fa-location-pin text-pink"></i>
+                <span>66 Tố Hữu - Vạn Phúc - Hà Đông</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: GIỚI THIỆU & LỜI CHÀO TỪ CHÍNH CHỦ -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-gem"></i> VỀ CHÚNG TÔI</span>
+          <h2 class="section-title">CHÀO ĐÓN BẠN ĐẾN VỚI <span class="gold-gradient">KARAOKE F5 PLUS</span></h2>
+          <p class="section-subtitle">Tâm huyết tạo nên không gian âm nhạc đẳng cấp và dịch vụ nồng hậu số 1</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Cột Hình Ảnh Chính Chủ -->
+          <div class="about-owner-column">
+            <div class="owner-card">
+              <div class="owner-frame">
+                <img src="chinh-chu.jpg" alt="Chính chủ Karaoke F5 Plus 66 Tố Hữu" class="owner-img">
+                <div class="owner-glow-border"></div>
+                <div class="owner-stamp">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>CHÍNH CHỦ F5 PLUS</span>
+                </div>
+              </div>
+              <div class="owner-caption">
+                <h3 class="owner-title">Quản Lý & Ban Điều Hành F5 PLUS</h3>
+                <p class="owner-role">Đón tiếp nồng hậu • Chu đáo từng khoảnh khắc</p>
+                <div class="owner-social-connect">
+                  <a href="tel:0931568866" class="owner-btn-call">
+                    <i class="fa-solid fa-phone"></i> 0931 568 866
+                  </a>
+                  <a href="https://zalo.me/0931568866" target="_blank" class="owner-btn-zalo">
+                    <i class="fa-solid fa-comment-dots"></i> Chat Zalo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột Lời Ngỏ & Cam Kết -->
+          <div class="about-content-column">
+            <div class="about-quote-box">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <blockquote>
+                "Tại <strong>Karaoke F5 Plus</strong>, chúng tôi xem mỗi vị khách là một người bạn quý. Chúng tôi đầu tư chỉn chu từ dàn loa, micro nịnh tiếng, ánh sáng lung linh huyền ảo cho đến phong cách phục vụ tận tâm, nhằm mang lại cho quý khách những phút giây bùng nổ cảm xúc và trọn vẹn niềm vui bên bạn bè, người thân và đối tác."
+              </blockquote>
+              <div class="quote-author">
+                <strong>— Ban Quản Lý Karaoke F5 Plus 66 Tố Hữu</strong>
+              </div>
+            </div>
+
+            <div class="about-commitments">
+              <div class="commit-item">
+                <div class="commit-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="commit-text">
+                  <h4>Cam Kết Minh Bạch & Uy Tín</h4>
+                  <p>Bảng giá giờ hát, menu đồ uống và món ăn được niêm yết rõ ràng, minh bạch 100%, không phát sinh phụ thu bất ngờ.</p>
+                </div>
+              </div>
+
+              <div class="commit-item">
+                <div class="commit-icon"><i class="fa-solid fa-music"></i></div>
+                <div class="commit-text">
+                  <h4>Kho Bài Hát Cập Nhật Mới Nhất 2026</h4>
+                  <p>Hệ thống chọn bài qua màn hình cảm ứng & Smartphone mượt mà. Đầy đủ Remix, Vinahouse, Nhạc Trẻ Hot Trend, Bolero, Nhạc Quốc Tế.</p>
+                </div>
+              </div>
+
+              <div class="commit-item">
+                <div class="commit-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                <div class="commit-text">
+                  <h4>Hỗ Trợ Setup Sự Kiện Chu Đáo</h4>
+                  <p>Nhận trang trí tiệc sinh nhật, kỷ niệm, họp mặt gia đình, tiếp khách VIP với đầy đủ hoa tươi, bóng bay, banner theo yêu cầu.</p>
+                </div>
+              </div>
+
+              <div class="commit-item">
+                <div class="commit-icon"><i class="fa-solid fa-shield-cat"></i></div>
+                <div class="commit-text">
+                  <h4>Hệ Thống PCCC Hiện Đại & An Toàn Tuyệt Đối</h4>
+                  <p>Đáp ứng đầy đủ các tiêu chuẩn nghiệm thu PCCC cao cấp, lối thoát hiểm thoáng rộng, vật liệu cách âm chống cháy an toàn.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: KHÔNG GIAN PHÒNG HÁT LUNG LINH (ROOM GALLERY) -->
+    <section class="rooms-section section-padding" id="rooms">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-eye"></i> KHÔNG GIAN THỰC TẾ</span>
+          <h2 class="section-title">HỆ THỐNG PHÒNG HÁT <span class="gold-gradient">VIP & SUPER VIP</span></h2>
+          <p class="section-subtitle">Khám phá nội thất sang trọng, ánh sáng lấp lánh và không gian riêng tư đỉnh cao</p>
+        </div>
+
+        <!-- Room Filter Tabs -->
+        <div class="room-filter-tabs">
+          <button class="filter-btn active" data-filter="all">Tất Cả Phòng</button>
+          <button class="filter-btn" data-filter="royal">Phòng VIP Hoàng Gia</button>
+          <button class="filter-btn" data-filter="party">Phòng Cyber Party</button>
+          <button class="filter-btn" data-filter="classic">Phòng Luxury Classic</button>
+        </div>
+
+        <!-- Room Grid -->
+        <div class="room-grid">
+
+          <!-- Card Phòng 1 -->
+          <div class="room-card" data-category="royal">
+            <div class="room-img-container">
+              <img src="phong-hat-1.jpg" alt="Phòng VIP Hoàng Gia Karaoke F5 Plus" class="room-img">
+              <div class="room-badge">VIP Hoàng Gia</div>
+              <button class="room-zoom-btn" onclick="openLightbox('phong-hat-1.jpg', 'Phòng Super VIP Hoàng Gia - Đẳng Cấp Thượng Lưu')">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Xem Ảnh Lớn
+              </button>
+            </div>
+            <div class="room-body">
+              <div class="room-specs">
+                <span><i class="fa-solid fa-users"></i> Sức chứa: 20 - 35 người</span>
+                <span><i class="fa-solid fa-compact-disc"></i> 4 Cặp Loa BMB / JBL</span>
+              </div>
+              <h3 class="room-name">Phòng Super VIP Hoàng Gia</h3>
+              <p class="room-desc">
+                Không gian thiết kế dát vàng lộng lẫy, sofa da nhập khẩu êm ái, trần LED sao vũ trụ huyền ảo. Thích hợp cho các buổi tiệc sinh nhật lớn, liên hoan công ty hay tiếp khách quan trọng.
+              </p>
+              <ul class="room-perks">
+                <li><i class="fa-solid fa-check text-gold"></i> Màn hình cảm ứng 4K chọn bài tức thì</li>
+                <li><i class="fa-solid fa-check text-gold"></i> 4 Micro không dây nịnh giọng chuyên nghiệp</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Điều hòa 2 chiều công suất lớn lọc khí</li>
+              </ul>
+              <div class="room-footer">
+                <div class="room-price-info">
+                  <small>Đặt phòng qua SĐT</small>
+                  <strong>Hotline: 0931 568 866</strong>
+                </div>
+                <a href="tel:0931568866" class="btn-book-room">
+                  <i class="fa-solid fa-phone"></i> Gọi Giữ Phòng
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Phòng 2 -->
+          <div class="room-card" data-category="party">
+            <div class="room-img-container">
+              <img src="phong-hat-2.jpg" alt="Phòng Cyber Party Karaoke F5 Plus" class="room-img">
+              <div class="room-badge badge-party">Cyber Club Party</div>
+              <button class="room-zoom-btn" onclick="openLightbox('phong-hat-2.jpg', 'Phòng Cyber Club Party - Ánh Sáng Laser 3D Cực Bốc')">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Xem Ảnh Lớn
+              </button>
+            </div>
+            <div class="room-body">
+              <div class="room-specs">
+                <span><i class="fa-solid fa-users"></i> Sức chứa: 15 - 25 người</span>
+                <span><i class="fa-solid fa-bolt"></i> Dàn Laser 3D Cảm Biến</span>
+              </div>
+              <h3 class="room-name">Phòng Cyber Club Party</h3>
+              <p class="room-desc">
+                Phong cách quán Bar / Mini Club thu nhỏ với dàn ánh sáng Laser 3D quét theo điệu nhạc, Subwoofer công suất khủng đánh rung sàn. Nơi thăng hoa cho các tín đồ mê Vinahouse & EDM.
+              </p>
+              <ul class="room-perks">
+                <li><i class="fa-solid fa-check text-gold"></i> Đèn LED ma trận chuyển động theo âm bass</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Sàn nhảy rộng rãi, hiệu ứng khói ảo diệu</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Âm thanh acoustic xử lý triệt tiêu tạp âm</li>
+              </ul>
+              <div class="room-footer">
+                <div class="room-price-info">
+                  <small>Đặt phòng qua SĐT</small>
+                  <strong>Hotline: 0931 568 866</strong>
+                </div>
+                <a href="tel:0931568866" class="btn-book-room">
+                  <i class="fa-solid fa-phone"></i> Gọi Giữ Phòng
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Phòng 3 -->
+          <div class="room-card" data-category="classic">
+            <div class="room-img-container">
+              <img src="phong-hat-3.jpg" alt="Phòng Luxury Classic Karaoke F5 Plus" class="room-img">
+              <div class="room-badge badge-classic">Luxury Classic</div>
+              <button class="room-zoom-btn" onclick="openLightbox('phong-hat-3.jpg', 'Phòng Luxury Classic VIP - Ấm Cúng & Tinh Tế')">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Xem Ảnh Lớn
+              </button>
+            </div>
+            <div class="room-body">
+              <div class="room-specs">
+                <span><i class="fa-solid fa-users"></i> Sức chứa: 8 - 18 người</span>
+                <span><i class="fa-solid fa-heart"></i> Tone Vàng Ấm Sang Trọng</span>
+              </div>
+              <h3 class="room-name">Phòng Luxury Classic Lounge</h3>
+              <p class="room-desc">
+                Thiết kế mang hơi thở cổ điển châu Âu thanh lịch, ánh sáng dịu mắt, bàn bar rượu đá cẩm thạch sang chảnh. Lý tưởng cho tụ họp gia đình, sinh nhật thân mật và giao lưu bạn bè.
+              </p>
+              <ul class="room-perks">
+                <li><i class="fa-solid fa-check text-gold"></i> Không gian ấm cúng, sang trọng, riêng tư</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Hệ thống chống rú rít Micro tuyệt đối</li>
+                <li><i class="fa-solid fa-check text-gold"></i> Phục vụ hoa quả tươi & đồ uống tận phòng</li>
+              </ul>
+              <div class="room-footer">
+                <div class="room-price-info">
+                  <small>Đặt phòng qua SĐT</small>
+                  <strong>Hotline: 0931 568 866</strong>
+                </div>
+                <a href="tel:0931568866" class="btn-book-room">
+                  <i class="fa-solid fa-phone"></i> Gọi Giữ Phòng
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="gallery-callout text-center">
+          <p><i class="fa-solid fa-circle-info"></i> Tất cả các phòng tại Karaoke F5 Plus đều được trang bị hệ thống cách âm đa lớp đạt tiêu chuẩn cách âm 100%, bảo đảm không gian riêng tư trọn vẹn.</p>
+          <a href="tel:0931568866" class="btn-call-gold">
+            <i class="fa-solid fa-phone-volume"></i> Gọi Ngay 0931 568 866 Để Giữ Phòng Đẹp Nhất
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: ĐIỂM NỔI BẬT & ĐẲNG CẤP DỊCH VỤ -->
+    <section class="features-section section-padding" id="features">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-star"></i> TẠI SAO CHỌN F5 PLUS?</span>
+          <h2 class="section-title">6 LÝ DO <span class="gold-gradient">KARAOKE F5 PLUS</span> LUÔN ĐƯỢC YÊU THÍCH</h2>
+          <p class="section-subtitle">Trải nghiệm dịch vụ giải trí khác biệt tại khu vực Tố Hữu - Vạn Phúc - Hà Đông</p>
+        </div>
+
+        <div class="features-grid">
+          
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-volume-high"></i>
+            </div>
+            <h3 class="feature-title">Âm Thanh Đẳng Cấp Quốc Tế</h3>
+            <p class="feature-desc">
+              Trang bị dàn loa công suất lớn, cục đẩy và vang số cao cấp. Micro không dây độ nhạy cao, nịnh giọng cực kỳ, giúp bạn tự tin toả sáng như ca sĩ thực thụ.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3 class="feature-title">Ánh Sáng Laser 3D Ma Mị</h3>
+            <p class="feature-desc">
+              Sự kết hợp hoàn hảo giữa đèn moving head, laser 3D và trần LED vô cực được lập trình đồng bộ theo từng nhịp điệu bài hát, mang lại thị giác mãn nhãn.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-martini-glass-citrus"></i>
+            </div>
+            <h3 class="feature-title">Menu Đồ Uống & Ẩm Thực Tươi Ngon</h3>
+            <p class="feature-desc">
+              Thực đơn phong phú với đĩa hoa quả nhiệt đới tươi mát theo mùa, các món nhậu lai rai đậm đà, bia nhập khẩu mát lạnh cùng các dòng vang hảo hạng.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-bell-concierge"></i>
+            </div>
+            <h3 class="feature-title">Nhân Viên Phục Vụ Chu Đáo 24/7</h3>
+            <p class="feature-desc">
+              Đội ngũ nhân viên trẻ trung, nhiệt tình, được đào tạo bài bản với nụ cười thân thiện, bấm chuông gọi là có mặt ngay lập tức hỗ trợ mọi yêu cầu.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-car"></i>
+            </div>
+            <h3 class="feature-title">Bãi Đỗ Xe Ô Tô Rộng Rãi</h3>
+            <p class="feature-desc">
+              Vị trí mặt đường 66 Tố Hữu thông thoáng, bãi đậu ô tô và xe máy rộng rãi, có bảo vệ trông giữ xe an toàn tuyệt đối miễn phí suốt thời gian hát.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <i class="fa-solid fa-cake-candles"></i>
+            </div>
+            <h3 class="feature-title">Setup Tiệc Trọn Gói Miễn Phí</h3>
+            <p class="feature-desc">
+              Hỗ trợ setup tiệc sinh nhật, party công ty, kỷ niệm với backdrop, bóng bay nghệ thuật, quà tặng và bài hát mừng sinh nhật hoành tráng.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: BẢNG GIÁ & GÓI COMBO ƯU ĐÃI -->
+    <section class="pricing-section section-padding" id="pricing">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-tag"></i> BẢNG GIÁ & COMBO</span>
+          <h2 class="section-title">GÓI DỊCH VỤ <span class="gold-gradient">TIẾT KIỆM & HẤP DẪN</span></h2>
+          <p class="section-subtitle">Chính sách giá hợp lý, minh bạch, gọi hotline nhận ngay báo giá và ưu đãi tốt nhất</p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <!-- Gói 1 -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <span class="pack-badge">Phổ Biến</span>
+              <h3 class="pack-name">Combo Hát Thả Ga</h3>
+              <p class="pack-desc">Thích hợp cho nhóm bạn 4 - 8 người tụ họp cuối tuần</p>
+              <div class="pack-price">
+                <span class="price-value">Ưu Đãi Đặc Biệt</span>
+                <span class="price-unit">/ Buổi tiệc</span>
+              </div>
+            </div>
+            <div class="pricing-body">
+              <ul class="pack-features">
+                <li><i class="fa-solid fa-check"></i> 02 giờ hát phòng VIP tiêu chuẩn</li>
+                <li><i class="fa-solid fa-check"></i> 01 Đĩa hoa quả đặc biệt bốn mùa</li>
+                <li><i class="fa-solid fa-check"></i> Đồ ăn vặt, khô bò, hạt điều lai rai</li>
+                <li><i class="fa-solid fa-check"></i> Khăn lạnh & nước suối tinh khiết</li>
+                <li><i class="fa-solid fa-check"></i> Miễn phí chọn bài qua Smartphone</li>
+              </ul>
+              <a href="tel:0931568866" class="btn-pack-order">
+                <i class="fa-solid fa-phone"></i> Gọi Đặt Combo: 0931 568 866
+              </a>
+            </div>
+          </div>
+
+          <!-- Gói 2: HOT / VIP -->
+          <div class="pricing-card card-featured">
+            <div class="popular-ribbon">HOT NHẤT</div>
+            <div class="pricing-header">
+              <span class="pack-badge pack-badge-gold"><i class="fa-solid fa-crown"></i> Sinh Nhật Rực Rỡ</span>
+              <h3 class="pack-name">Combo Tiệc Sinh Nhật VIP</h3>
+              <p class="pack-desc">Dành cho nhóm từ 10 - 25 người mừng tuổi mới cực sung</p>
+              <div class="pack-price">
+                <span class="price-value gold-gradient">TẶNG GÓI DECOR</span>
+                <span class="price-unit">Khi gọi đặt trước</span>
+              </div>
+            </div>
+            <div class="pricing-body">
+              <ul class="pack-features">
+                <li><i class="fa-solid fa-star text-gold"></i> <strong>Miễn phí set-up trang trí bóng bay & chữ</strong></li>
+                <li><i class="fa-solid fa-star text-gold"></i> <strong>Tặng đĩa hoa quả đại tiệc F5 Plus</strong></li>
+                <li><i class="fa-solid fa-check"></i> Phòng Super VIP hiệu ứng Laser 3D bùng nổ</li>
+                <li><i class="fa-solid fa-check"></i> Âm nhạc mừng sinh nhật độc quyền sôi động</li>
+                <li><i class="fa-solid fa-check"></i> Giảm ngay 15% tổng hóa đơn giờ hát</li>
+              </ul>
+              <a href="tel:0931568866" class="btn-pack-order btn-featured-order">
+                <i class="fa-solid fa-phone-volume"></i> Gọi Đặt Tiệc Sinh Nhật Ngay
+              </a>
+            </div>
+          </div>
+
+          <!-- Gói 3 -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <span class="pack-badge">Doanh Nghiệp</span>
+              <h3 class="pack-name">Combo Tiếp Khách & Sự Kiện</h3>
+              <p class="pack-desc">Sang trọng, bảo mật và chỉn chu cho đối tác & doanh nghiệp</p>
+              <div class="pack-price">
+                <span class="price-value">Phòng VIP Hoàng Gia</span>
+                <span class="price-unit">Đẳng cấp 5 sao</span>
+              </div>
+            </div>
+            <div class="pricing-body">
+              <ul class="pack-features">
+                <li><i class="fa-solid fa-check"></i> Phòng VIP Hoàng Gia sức chứa tới 40 người</li>
+                <li><i class="fa-solid fa-check"></i> Menu Rượu Vang & Rượu Mạnh chọn lọc</li>
+                <li><i class="fa-solid fa-check"></i> Nhân viên riêng phục vụ chu đáo tận bàn</li>
+                <li><i class="fa-solid fa-check"></i> Xuất hóa đơn VAT theo yêu cầu công ty</li>
+                <li><i class="fa-solid fa-check"></i> Đỗ xe ô tô an ninh ưu tiên trước sảnh</li>
+              </ul>
+              <a href="tel:0931568866" class="btn-pack-order">
+                <i class="fa-solid fa-phone"></i> Gọi Tư Vấn: 0931 568 866
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: KHỐI ĐẶT PHÒNG NHANH BẰNG SỐ ĐIỆN THOẠI (THAY THẾ FORM) -->
+    <section class="hotline-booking-section section-padding" id="booking-hotline">
+      <div class="container">
+        
+        <div class="hotline-box-wrapper">
+          <div class="hotline-box-content text-center">
+            <span class="section-tag"><i class="fa-solid fa-phone-volume"></i> ĐẶT PHÒNG NHANH CHÓNG 24/7</span>
+            <h2 class="hotline-box-title">ĐẶT PHÒNG HÁT TRỰC TIẾP QUA <br><span class="gold-gradient">SỐ ĐIỆN THOẠI & ZALO</span></h2>
+            <p class="hotline-box-desc">
+              Không cần thủ tục rườm rà, quý khách chỉ cần nhấc máy gọi điện hoặc nhắn tin Zalo tới Hotline. <br>
+              Đội ngũ F5 Plus sẽ chuẩn bị phòng VIP đẹp nhất, bật điều hòa và sẵn sàng đón tiếp quý khách chu đáo!
+            </p>
+
+            <div class="hotline-cta-center">
+              <!-- Nút Gọi Trực Tiếp Lớn -->
+              <a href="tel:0931568866" class="btn-main-hotline">
+                <span class="hotline-icon-pulse">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </span>
+                <span class="hotline-num-text">
+                  <small>BẤM VÀO ĐỂ GỌI GIỮ PHÒNG NGAY</small>
+                  <strong>0931 568 866</strong>
+                </span>
+              </a>
+
+              <!-- Nút Zalo -->
+              <a href="https://zalo.me/0931568866" target="_blank" rel="noopener noreferrer" class="btn-main-zalo">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>Nhắn Tin Zalo: 0931 568 866</span>
+              </a>
+            </div>
+
+            <!-- Cam Kết Nhanh -->
+            <div class="hotline-box-perks">
+              <div class="perk-pill"><i class="fa-solid fa-circle-check text-gold"></i> Không cần đặt cọc trước</div>
+              <div class="perk-pill"><i class="fa-solid fa-circle-check text-gold"></i> Giữ phòng ngay sau 1 phút</div>
+              <div class="perk-pill"><i class="fa-solid fa-circle-check text-gold"></i> Bãi đỗ xe ô tô 24/7 rộng rãi</div>
+              <div class="perk-pill"><i class="fa-solid fa-circle-check text-gold"></i> Tặng decor sinh nhật miễn phí</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: BẢN ĐỒ VỊ TRÍ & LIÊN HỆ (GOOGLE MAPS) -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-location-dot"></i> VỊ TRÍ THUẬN TIỆN</span>
+          <h2 class="section-title">BẢN ĐỒ CHỈ ĐƯỜNG ĐẾN <span class="gold-gradient">66 TỐ HỮU - VẠN PHÚC</span></h2>
+          <p class="section-subtitle">Mặt đường lớn Tố Hữu, giao thông thuận lợi, chỗ đỗ xe ô tô & xe máy rộng rãi</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Thông tin liên hệ -->
+          <div class="contact-info-card">
+            <h3 class="contact-card-title">Karaoke F5 Plus - 66 Tố Hữu</h3>
+            
+            <div class="contact-detail-list">
+              <div class="contact-detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-map-pin"></i></div>
+                <div>
+                  <strong>Địa Chỉ Quán:</strong>
+                  <p>66 Tố Hữu, Phường Vạn Phúc, Quận Hà Đông, TP. Hà Nội</p>
+                  <small class="text-muted">(Mặt đường lớn Tố Hữu, gần ngã tư Vạn Phúc, cực kỳ dễ tìm)</small>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <strong>Số Điện Thoại Hotline:</strong>
+                  <p><a href="tel:0931568866" class="phone-link">0931 568 866</a></p>
+                  <small class="text-gold"><i class="fa-solid fa-circle-check"></i> Bấm gọi để đặt phòng giữ chỗ lập tức</small>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="detail-icon"><i class="fa-brands fa-rocketchat"></i></div>
+                <div>
+                  <strong>Nhắn Tin Zalo:</strong>
+                  <p><a href="https://zalo.me/0931568866" target="_blank" class="zalo-link">0931 568 866 (Bấm để nhắn Zalo)</a></p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-clock"></i></div>
+                <div>
+                  <strong>Giờ Hoạt Động:</strong>
+                  <p>Mở cửa từ 10:00 Sáng đến 03:00 Đêm (Tất cả các ngày trong tuần)</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-square-parking"></i></div>
+                <div>
+                  <strong>Chỗ Đậu Xe:</strong>
+                  <p>Có chỗ đỗ nhiều xe ô tô & xe máy trước sảnh, bảo vệ trông coi 24/24</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-actions-box">
+              <a href="https://www.google.com/maps/place/66+P.+T%E1%BB%91+H%E1%BB%AFu,+H%C3%A0+%C4%90%C3%B4ng,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@20.9852417,105.7722653,17z/data=!4m15!1m8!3m7!1s0x31345331499232fb:0xf6d8f5ce3c282728!2zNjYgUC4gVOG7kSBI4buvdSwgSMOgIMSQw7RuZywgSMOgIE7hu5lpIDEwMDAwMCwgVmlldG5hbQ!3b1!8m2!3d20.9852367!4d105.7748402!16s%2Fg%2F11vqmws05z!3m5!1s0x31345331499232fb:0xf6d8f5ce3c282728!8m2!3d20.9852367!4d105.7748402!16s%2Fg%2F11vqmws05z?entry=ttu" target="_blank" rel="noopener noreferrer" class="btn-open-google-maps">
+                <i class="fa-solid fa-diamond-turn-right"></i>
+                <span>Mở Bản Đồ Chỉ Đường Trên Google Maps</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Bản đồ Google Maps Embed Trực Tiếp -->
+          <div class="map-embed-card">
+            <div class="map-header-status">
+              <span class="status-indicator"></span>
+              <span>Bản đồ vị trí Karaoke F5 Plus tại 66 Tố Hữu, Hà Đông</span>
+            </div>
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.201885465922!2d105.7722653!3d20.9852417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345331499232fb%3A0xf6d8f5ce3c282728!2zNjYgUC4gVOG7kSBI4buvdSwgSMOgIMSQw7RuZywgSMOgIE7hu5lpIDEwMDAwMCwgVmlldG5hbQ!5e0!3m2!1svi!2s!4v1714000000000!5m2!1svi!2s" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Bản đồ chỉ đường tới Karaoke F5 Plus 66 Tố Hữu, Hà Đông">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-col footer-about">
+        <a href="#hero" class="brand-logo footer-logo">
+          <div class="logo-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+          <div class="logo-text">
+            <span class="brand-name">F5 <span class="plus-glow">PLUS</span></span>
+            <span class="brand-tag">KARAOKE CLUB</span>
+          </div>
+        </a>
+        <p class="footer-desc">
+          Tổ hợp Karaoke cao cấp bậc nhất Hà Đông với kiến trúc sang trọng, dàn âm thanh chuẩn châu Âu và phong cách phục vụ tận tình, mang lại niềm vui bất tận cho mọi bữa tiệc.
+        </p>
+        <div class="footer-socials">
+          <a href="tel:0931568866" title="Hotline" class="social-link"><i class="fa-solid fa-phone"></i></a>
+          <a href="https://zalo.me/0931568866" target="_blank" title="Zalo" class="social-link"><i class="fa-solid fa-comment-dots"></i></a>
+          <a href="https://www.google.com/maps/place/66+P.+T%E1%BB%91+H%E1%BB%AFu,+H%C3%A0+%C4%90%C3%B4ng,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@20.9852417,105.7722653,17z/data=!4m15!1m8!3m7!1s0x31345331499232fb:0xf6d8f5ce3c282728!2zNjYgUC4gVOG7kSBI4buvdSwgSMOgIMSQw7RuZywgSMOgIE7hu5lpIDEwMDAwMCwgVmlldG5hbQ!3b1!8m2!3d20.9852367!4d105.7748402!16s%2Fg%2F11vqmws05z!3m5!1s0x31345331499232fb:0xf6d8f5ce3c282728!8m2!3d20.9852367!4d105.7748402!16s%2Fg%2F11vqmws05z?entry=ttu" target="_blank" title="Google Maps" class="social-link"><i class="fa-solid fa-location-dot"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Liên Kết Nhanh</h4>
+        <ul class="footer-links">
+          <li><a href="#hero"><i class="fa-solid fa-angle-right"></i> Trang Chủ</a></li>
+          <li><a href="#about"><i class="fa-solid fa-angle-right"></i> Giới Thiệu & Chính Chủ</a></li>
+          <li><a href="#rooms"><i class="fa-solid fa-angle-right"></i> Không Gian Phòng VIP</a></li>
+          <li><a href="#pricing"><i class="fa-solid fa-angle-right"></i> Bảng Giá & Khuyến Mãi</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-angle-right"></i> Chỉ Đường Google Maps</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Dịch Vụ Phục Vụ</h4>
+        <ul class="footer-links">
+          <li><a href="tel:0931568866"><i class="fa-solid fa-angle-right"></i> Đặt Phòng Sinh Nhật Trọn Gói</a></li>
+          <li><a href="tel:0931568866"><i class="fa-solid fa-angle-right"></i> Phòng Hát Tiếp Khách VIP</a></li>
+          <li><a href="tel:0931568866"><i class="fa-solid fa-angle-right"></i> Tiệc Liên Hoan Công Ty</a></li>
+          <li><a href="tel:0931568866"><i class="fa-solid fa-angle-right"></i> Phòng Cyber Bar & Mini Club</a></li>
+          <li><a href="tel:0931568866"><i class="fa-solid fa-angle-right"></i> Dịch Vụ Hoa Quả & Rượu Vang</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact-col">
+        <h4 class="footer-heading">Hotline Đặt Phòng</h4>
+        <div class="footer-hotline-card">
+          <p class="hotline-card-sub">Tổng đài hỗ trợ 24/7</p>
+          <a href="tel:0931568866" class="footer-hotline-btn">
+            <i class="fa-solid fa-phone-volume"></i> 0931 568 866
+          </a>
+          <p class="hotline-card-addr">
+            <i class="fa-solid fa-map-location-dot"></i> 66 Tố Hữu, Vạn Phúc, Hà Đông, Hà Nội
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 KARAOKE F5 PLUS - 66 TỐ HỮU. All Rights Reserved.</p>
+        <p class="footer-credit">Hotline đặt phòng: <a href="tel:0931568866" style="color: var(--gold-primary); text-decoration: none; font-weight: 800;">0931 568 866</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK ACTIONS (CALL / ZALO / MAPS) -->
+  <div class="floating-action-group">
+    
+    <!-- Nút Gọi Hotline Rung Lắc -->
+    <a href="tel:0931568866" class="floating-btn btn-call-float" title="Gọi Hotline: 0931 568 866">
+      <span class="sonar-wave wave-1"></span>
+      <span class="sonar-wave wave-2"></span>
+      <i class="fa-solid fa-phone"></i>
+      <span class="float-tooltip">Gọi: 0931.568.866</span>
+    </a>
+
+    <!-- Nút Chat Zalo -->
+    <a href="https://zalo.me/0931568866" target="_blank" rel="noopener noreferrer" class="floating-btn btn-zalo-float" title="Chat Zalo">
+      <span class="sonar-wave wave-zalo"></span>
+      <span class="zalo-text">Zalo</span>
+      <span class="float-tooltip">Chat Zalo</span>
+    </a>
+
+    <!-- Nút Chỉ Đường Google Maps -->
+    <a href="https://www.google.com/maps/place/66+P.+T%E1%BB%91+H%E1%BB%AFu,+H%C3%A0+%C4%90%C3%B4ng,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@20.9852417,105.7722653,17z/data=!4m15!1m8!3m7!1s0x31345331499232fb:0xf6d8f5ce3c282728!2zNjYgUC4gVOG7kSBI4buvdSwgSMOgIMSQw7RuZywgSMOgIE7hu5lpIDEwMDAwMCwgVmlldG5hbQ!3b1!8m2!3d20.9852367!4d105.7748402!16s%2Fg%2F11vqmws05z!3m5!1s0x31345331499232fb:0xf6d8f5ce3c282728!8m2!3d20.9852367!4d105.7748402!16s%2Fg%2F11vqmws05z?entry=ttu" target="_blank" rel="noopener noreferrer" class="floating-btn btn-map-float" title="Xem Chỉ Đường Google Maps">
+      <i class="fa-solid fa-diamond-turn-right"></i>
+      <span class="float-tooltip">Chỉ Đường Maps</span>
+    </a>
+
+    <!-- Nút Cuộn Lên Đầu -->
+    <button class="floating-btn btn-scroll-top" id="scroll-top-btn" title="Lên đầu trang">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+  </div>
+
+  <!-- BOTTOM MOBILE ACTION BAR (THANH ĐIỀU HƯỚNG NHANH TRÊN ĐIỆN THOẠI) -->
+  <div class="mobile-action-bar">
+    <a href="tel:0931568866" class="mobile-action-item action-call">
+      <i class="fa-solid fa-phone-volume"></i>
+      <span>Gọi Hotline</span>
+    </a>
+    <a href="https://zalo.me/0931568866" target="_blank" class="mobile-action-item action-zalo">
+      <i class="fa-solid fa-comment-dots"></i>
+      <span>Nhắn Zalo</span>
+    </a>
+    <a href="https://www.google.com/maps/place/66+P.+T%E1%BB%91+H%E1%BB%AFu,+H%C3%A0+%C4%90%C3%B4ng,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@20.9852417,105.7722653,17z/data=!4m15!1m8!3m7!1s0x31345331499232fb:0xf6d8f5ce3c282728!2zNjYgUC4gVOG7kSBI4buvdSwgSMOgIMSQw7RuZywgSMOgIE7hu5lpIDEwMDAwMCwgVmlldG5hbQ!3b1!8m2!3d20.9852367!4d105.7748402!16s%2Fg%2F11vqmws05z!3m5!1s0x31345331499232fb:0xf6d8f5ce3c282728!8m2!3d20.9852367!4d105.7748402!16s%2Fg%2F11vqmws05z?entry=ttu" target="_blank" class="mobile-action-item action-map">
+      <i class="fa-solid fa-location-arrow"></i>
+      <span>Chỉ Đường</span>
+    </a>
+  </div>
+
+  <!-- LIGHTBOX MODAL: XEM ẢNH PHÒNG FULL SIZE -->
+  <div class="lightbox-overlay" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <img src="" alt="Ảnh phòng phóng to" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
